@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Activity, AudioLines, CarFront, Check, ChevronDown, CircleHelp, Coins, Gauge, Globe2, Keyboard, Menu, Pause, Play, RotateCcw, Settings2, ShieldCheck, Sparkles, Trophy, Volume2, VolumeX, Zap } from "lucide-react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import RaceScene from "./components/RaceScene.jsx";
 import audioManager from "./audio/audioManager.js";
 
@@ -270,6 +271,7 @@ export default function App() {
         <div className="audio-footnote">Settings save in this browser. Audio begins only after you interact with the page.</div>
       </section></div>}
       {toast && <div className="toast"><Check size={16}/>{toast}</div>}
+      <SpeedInsights />
     </div>
   );
 }
